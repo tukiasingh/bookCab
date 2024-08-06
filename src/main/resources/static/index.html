@@ -11,8 +11,19 @@
         <h1> Welcome to Travel Management System</h1>
     </div>
 
+    <br><br>
     <div class="container">
-        <form>
+        <form action="/bookCab" method="post">
+            <div class="mb-3">
+                <label for="name" class="form-label">Enter Name: </label>
+                <input type="text" class="form-c  ontrol" id="name" name="name" style="width: 400px">
+
+            </div>
+            <div class="mb-3">
+                <label for="phoneNumber" class="form-label">Enter Phone Number: </label>
+                <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" style="width: 400px">
+
+            </div>
             <div class="mb-3">
                 <label for="fromLocation" class="form-label">From Location: </label>
                 <input type="text" class="form-control" id="fromLocation" name="fromLocation" style="width: 400px">
@@ -27,7 +38,7 @@
                 <input type="text" class="form-control" id="typeOfCab" name="typeOfCab" style="width: 400px">
             </div>
 
-            <button type="submit" class="btn btn-primary">Submit</button>
+            <button type="submit" class="btn btn-primary">Book Cab</button>
         </form>
 
     </div>

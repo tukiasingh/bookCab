@@ -12,7 +12,6 @@ public class BookCab {
     private int bookingId;
     private String Name;
     private String phoneNumber;
-    private String address;
     private String fromLocation;
     private String toLocation;
     private String typeOfCab;
@@ -27,11 +26,10 @@ public class BookCab {
         this.typeOfCab = typeOfCab;
     }
 
-    public BookCab(int bookingId, String name, String phoneNumber, String address, String fromLocation, String toLocation, String typeOfCab) {
+    public BookCab(int bookingId, String name, String phoneNumber, String fromLocation, String toLocation, String typeOfCab) {
         this.bookingId = bookingId;
         Name = name;
         this.phoneNumber = phoneNumber;
-        this.address = address;
         this.fromLocation = fromLocation;
         this.toLocation = toLocation;
         this.typeOfCab = typeOfCab;
@@ -61,13 +59,7 @@ public class BookCab {
         this.phoneNumber = phoneNumber;
     }
 
-    public String getAddress() {
-        return address;
-    }
 
-    public void setAddress(String address) {
-        this.address = address;
-    }
 
     public String getFromLocation() {
         return fromLocation;
@@ -99,7 +91,6 @@ public class BookCab {
                 "bookingId=" + bookingId +
                 ", Name='" + Name + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
-                ", address='" + address + '\'' +
                 ", fromLocation='" + fromLocation + '\'' +
                 ", toLocation='" + toLocation + '\'' +
                 ", typeOfCab='" + typeOfCab + '\'' +
