@@ -8,9 +8,9 @@ import jakarta.persistence.Id;
 @Entity
 public class BookCab {
     @Id
-    @GeneratedValue(strategy = GenerationType.AUTO)
-    private int bookingId;
-    private String Name;
+    @GeneratedValue(strategy = GenerationType.IDENTITY)
+    private Integer bookingId;
+    private String name;
     private String phoneNumber;
     private String fromLocation;
     private String toLocation;
@@ -28,7 +28,7 @@ public class BookCab {
 
     public BookCab(int bookingId, String name, String phoneNumber, String fromLocation, String toLocation, String typeOfCab) {
         this.bookingId = bookingId;
-        Name = name;
+        this.name = name;
         this.phoneNumber = phoneNumber;
         this.fromLocation = fromLocation;
         this.toLocation = toLocation;
@@ -44,11 +44,11 @@ public class BookCab {
     }
 
     public String getName() {
-        return Name;
+        return name;
     }
 
     public void setName(String name) {
-        Name = name;
+        this.name = name;
     }
 
     public String getPhoneNumber() {
@@ -89,7 +89,7 @@ public class BookCab {
     public String toString() {
         return "BookCab{" +
                 "bookingId=" + bookingId +
-                ", Name='" + Name + '\'' +
+                ", Name='" + name + '\'' +
                 ", phoneNumber='" + phoneNumber + '\'' +
                 ", fromLocation='" + fromLocation + '\'' +
                 ", toLocation='" + toLocation + '\'' +

@@ -7,17 +7,20 @@
 </head>
 <body>
 <script src="https://cdn.jsdelivr.net/npm/bootstrap@5.3.3/dist/js/bootstrap.bundle.min.js" integrity="sha384-YvpcrYf0tY3lHB60NNkmXc5s9fDVZLESaAA55NDzOxhy9GkcIdslK1eN7N6jIeHz" crossorigin="anonymous"></script>
-    <div class="pt-5 md-4 bg-primary text-white rounded">
-        <h1> Welcome to Travel Management System</h1>
-    </div>
 
-    <br><br>
     <div class="container">
+        <div class="mt-4 p-5 bg-primary text-white rounded">
+            <h1>Welcome to Travel Management System</h1>
+    <!--        <a href="/v1/news?author=john">News By Author John</a>-->
+    <!--        <h1> Welcome to Travel Management System</h1>-->
+        </div>
+
+        <br><br>
+
         <form action="/bookCab" method="post">
             <div class="mb-3">
                 <label for="name" class="form-label">Enter Name: </label>
-                <input type="text" class="form-c  ontrol" id="name" name="name" style="width: 400px">
-
+                <input type="text" class="form-control" id="name" name="name" style="width: 400px">
             </div>
             <div class="mb-3">
                 <label for="phoneNumber" class="form-label">Enter Phone Number: </label>
@@ -37,8 +40,9 @@
                 <label for="typeOfCab" class="form-label">Type of Cab: </label>
                 <input type="text" class="form-control" id="typeOfCab" name="typeOfCab" style="width: 400px">
             </div>
-
+            <div class="col-auto">
             <button type="submit" class="btn btn-primary">Book Cab</button>
+            </div>
         </form>
 
     </div>

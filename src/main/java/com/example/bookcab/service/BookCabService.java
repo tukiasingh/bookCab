@@ -18,14 +18,22 @@ public class BookCabService {
     public ResponseEntity<Response> bookCab(BookCab bookCab) {
         try {
             BookCab cab = new BookCab();
-            cab.setBookingId(bookCab.getBookingId());
+//            cab.setBookingId(bookCab.getBookingId());
             cab.setName(bookCab.getName());
+            cab.setPhoneNumber(bookCab.getPhoneNumber());
             cab.setFromLocation(bookCab.getFromLocation());
             cab.setToLocation(bookCab.getToLocation());
             cab.setTypeOfCab(bookCab.getTypeOfCab());
+
+            System.out.println("Values we have just before saving to the database: "+
+                    "Name: " +cab.getName() +
+                    ", Phone Name: " +cab.getName() +
+                    ", From Location: " +cab.getFromLocation() +
+                    ", To Location: " +cab.getToLocation() +
+                    ", Type of Cab: " +cab.getTypeOfCab() );
             BookCabRepository.save(cab);
             String message = "Your cab is booked Successfully! Cab details: " +
-                    "Booking Id: " + bookCab.getBookingId() +
+//                    "Booking Id: " + bookCab.getBookingId() +
                     "From Location: " + bookCab.getFromLocation() +
                     "To Location: " + bookCab.getToLocation();
             int code = 200;

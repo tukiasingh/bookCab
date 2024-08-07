@@ -18,10 +18,17 @@ public class BookCabController {
     BookCabService bookCabService;
 
     @RequestMapping(path="/bookCab", method= RequestMethod.POST)
-    public String bookCab (Model page, @RequestParam String name, @RequestParam String phoneNumber,
+    public String bookCab (@RequestParam String name, @RequestParam String phoneNumber,
                                              @RequestParam String fromLocation, @RequestParam String toLocation,
-                                             @RequestParam String typeOfCab) {
+                                             @RequestParam String typeOfCab, Model page) {
 
+
+        System.out.println("Values received from the form: "+
+                "Name: " +name +
+                "Phone Name: " +phoneNumber +
+                "From Location: " +fromLocation +
+                "To Location: " +toLocation +
+                "Type of Cab: " +typeOfCab );
         BookCab cab = new BookCab();
         cab.setName(name);
         cab.setPhoneNumber(phoneNumber);
@@ -34,8 +41,6 @@ public class BookCabController {
         page.addAttribute("bookingDetails", cab);
 
         return "success.html";
-
-
 
     }
 }
