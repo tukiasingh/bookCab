@@ -1,5 +1,5 @@
 <!DOCTYPE html>
-<html lang="en">
+<html lang="en" xmlns:th="https://www.thymeleaf.org">
 <head>
     <meta charset="UTF-8">
     <title>Book Cab</title>
@@ -11,41 +11,11 @@
     <div class="container">
         <div class="mt-4 p-5 bg-primary text-white rounded">
             <h1>Welcome to Travel Management System</h1>
-    <!--        <a href="/v1/news?author=john">News By Author John</a>-->
-    <!--        <h1> Welcome to Travel Management System</h1>-->
+            <a href="/cab/bookACab" style="color: aliceblue">Book Cab</a><br>
+            <a href="/cab/calculateTripFare" style="color: aliceblue">Calculate Fare</a>
         </div>
-
-        <br><br>
-
-        <form action="/bookCab" method="post">
-            <div class="mb-3">
-                <label for="name" class="form-label">Enter Name: </label>
-                <input type="text" class="form-control" id="name" name="name" style="width: 400px">
-            </div>
-            <div class="mb-3">
-                <label for="phoneNumber" class="form-label">Enter Phone Number: </label>
-                <input type="text" class="form-control" id="phoneNumber" name="phoneNumber" style="width: 400px">
-
-            </div>
-            <div class="mb-3">
-                <label for="fromLocation" class="form-label">From Location: </label>
-                <input type="text" class="form-control" id="fromLocation" name="fromLocation" style="width: 400px">
-
-            </div>
-            <div class="mb-3">
-                <label for="toLocation" class="form-label">To Location: </label>
-                <input type="text" class="form-control" id="toLocation" name="toLocation" style="width: 400px">
-            </div>
-            <div class="mb-3">
-                <label for="typeOfCab" class="form-label">Type of Cab: </label>
-                <input type="text" class="form-control" id="typeOfCab" name="typeOfCab" style="width: 400px">
-            </div>
-            <div class="col-auto">
-            <button type="submit" class="btn btn-primary">Book Cab</button>
-            </div>
-        </form>
-
     </div>
+
 
 </body>
 </html>
