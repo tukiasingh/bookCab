@@ -40,7 +40,7 @@ public class BookCabService {
             }
 
             String message = "Your cab is booked Successfully! \nCab details: " + bookCabResult +
-                   "Amount to be Paid: $" + cabFareProxy.findCabFareByType(cab.getTypeOfCab());
+                   "Amount to be Paid: $" + cabFareProxy.findCabFareByType(cab.getTypeOfCab()).get(0);
             int code = 200;
             Response response = new Response(code, message);
             System.out.println("My Response is: "+response);
@@ -63,12 +63,10 @@ public class BookCabService {
             cab.setToLocation(bookCab.getToLocation());
             cab.setTypeOfCab(bookCab.getTypeOfCab());
 
-
-
             String message = "Cab Fare details: " +
                     "From Location: " + cab.getFromLocation()  +
                     "To Location: " + cab.getFromLocation()  +
-                    "Amount to be Paid: $" + cabFareProxy.findCabFareByType(cab.getTypeOfCab());
+                    "Amount to be Paid: $" + cabFareProxy.findCabFareByType(cab.getTypeOfCab()).get(0);
             int code = 200;
             Response response = new Response(code, message);
             System.out.println("My Response is: "+response);
